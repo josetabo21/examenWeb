@@ -1,0 +1,82 @@
+<div class="row">
+
+  <div class="col-sm-12">
+    <app-nav-bar></app-nav-bar>
+  </div>
+
+  <div class="col-sm-12" align="center">
+    <br>
+    <p class="h3">SELECCION DE TRANSFERENCIA</p>
+  </div>
+  <div class="col-sm-3"></div>
+  <div class="row">
+  <div class="col-sm-6">
+    <h2 align="center">Estudiante</h2>
+    <div class="card">
+      <div class="card-header">
+        Nombre Estudiante: {{estudiante[0].nombres}}
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-5">
+            <img class="img-fluid" [src]=estudiante[0].urlFotoEstudiante alt="No disponible">
+          </div>
+          <div class="col-sm-7">
+            <h5 class="card-title">Fecha Nacimiento: {{estudiante[0].fechaNacimiento}} </h5>
+            <p class="card-text">Semestre Referencial: {{estudiante[0].semestreActual}}</p>
+            <p class="card-text">Graduado: {{estudiante[0].graduado}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="col-sm-6">
+      <h2 align="center">Item de Peticion</h2>
+      <div class="card">
+        <div class="card-header">
+          Materia: {{materia[0].nombre}}
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-5">
+              <img class="img-fluid" [src]=materia[0].urlFotoMateria alt="No disponible">
+            </div>
+            <div class="col-sm-7">
+              <h5 class="card-title">Horas a la semana: {{materia[0].numeroHorasSemana}} </h5>
+              <p class="card-text">Detalle: {{materia[0].descripcion}}</p>
+              <p class="card-text">Fecha Creacion: {{materia[0].fechaCreacion}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3"></div>
+
+  <div class="col-sm-12" ><br></div>
+
+
+  <div class="col-sm-12">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h3>Materias:</h3>
+        <hr class="my-4">
+        <div class="row">
+          <div class="col-sm-3" *ngFor="let materia of materia">
+            <div class="card">
+              <div align="center"><img class="card-img-top img-fluid" [src]=materia.urlFotoMateria alt="Imagen Materia"></div>
+              <div class="card-body">
+                <h5 class="card-title" style="text-align: center">{{materia.codigo}} </h5>
+                <p class="card-text">Nombre: {{materia.nombre}}</p>
+                <p class="card-text">Horas a la Semana: {{materia.numeroHorasSemana}}</p>
+                <p class="card-text">Descripcion: {{materia.descripcion}}</p>
+                <a href="#" [routerLink]="['/transferencias']">Transferencia</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

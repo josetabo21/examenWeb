@@ -1,0 +1,27 @@
+<div class="login-page">
+<div class="form">
+  <form class="login-form">
+    <input type="text" name="usuario" placeholder="username@hotmail.com" [(ngModel)]="usuario" required
+           pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" minlength="6" #emailInput="ngModel"/>
+    <div
+      class="alert alert-warning"
+      role="alert"
+      *ngIf="emailInput.dirty && emailInput.errors"
+    >
+      <p *ngIf="emailInput.errors.required">
+        Campo requerido
+      </p>
+
+      <p *ngIf="emailInput.errors.pattern">
+        Debe de ser un correo valido
+      </p>
+      <p *ngIf="emailInput.errors.minlength">
+        Debe tener minimo de 6 caracteres
+      </p>
+    </div>
+    <input type="password" name="contrasena" placeholder="password" [(ngModel)]="contrasena"/>
+    <button class="btn btn-block btn-primary"
+            (click)="login()">Login</button>
+  </form>
+</div>
+</div>

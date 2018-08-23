@@ -1,0 +1,232 @@
+<div class="row">
+
+  <div class="col-sm-12">
+    <app-nav-bar></app-nav-bar>
+  </div>
+
+  <div class="col-sm-12" align="center">
+    <br>
+    <p class="h1">Perfil</p>
+  </div>
+  <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+      <h2 align="center">Usuario</h2>
+      <div class="card">
+        <div class="card-header">
+          Nombre Usuario: carrillojorge1395@hotmail.com
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-5">
+              <img class="img-fluid" src="https://i1.wp.com/www.cullar.es/wp-content/uploads/2017/06/simbolo-de-usuario-negro-macho_318-60703.jpg" alt="No disponible">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+<div class="row">
+
+    <div class="col-sm-6">
+    <h1 align="center">Peticiones</h1>
+    </div>
+    </div>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+  <div class="row">
+
+    <div class="col-sm-6">
+      <h2 align="center">Estudiante</h2>
+      <div class="card">
+        <div class="card-header">
+          Nombre Estudiante: {{estudiante[0].nombres}}
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-5">
+              <img class="img-fluid" [src]=estudiante[0].urlFotoEstudiante alt="No disponible">
+            </div>
+            <div class="col-sm-7">
+              <h5 class="card-title">Fecha Nacimiento: {{estudiante[0].fechaNacimiento}} </h5>
+              <p class="card-text">Semestre Referencial: {{estudiante[0].semestreActual}}</p>
+              <p class="card-text">Graduado: {{estudiante[0].graduado}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <p align="center"><h1 class="text-warning shake" >En Espera</h1>
+    </div>
+</div>
+  </div>
+</div>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+<div class="row">
+  <div class="row">
+    <div class="col-sm-5">
+      <h2 align="center">Materia </h2>
+      <div class="card">
+        <div class="card-header">
+          Materia: {{materia[0].nombre}}
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-5">
+              <img class="img-fluid" [src]=materia[0].urlFotoMateria alt="No disponible">
+            </div>
+            <div class="col-sm-7">
+              <h5 class="card-title">Horas a la semana: {{materia[0].numeroHorasSemana}} </h5>
+              <p class="card-text">Detalle: {{materia[0].descripcion}}</p>
+              <p class="card-text">Fecha Creacion: {{materia[0].fechaCreacion}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <p align="center"> <img src="https://image.flaticon.com/icons/svg/64/64496.svg"></p>
+    </div>
+    <div class="col-sm-5">
+      <h2 align="center">Materia </h2>
+      <div class="card">
+        <div class="card-header">
+          Materia: {{materia[3].nombre}}
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-5">
+              <img class="img-fluid" [src]=materia[3].urlFotoMateria alt="No disponible">
+            </div>
+            <div class="col-sm-7">
+              <h5 class="card-title">Horas a la semana: {{materia[3].numeroHorasSemana}} </h5>
+              <p class="card-text">Detalle: {{materia[3].descripcion}}</p>
+              <p class="card-text">Fecha Creacion: {{materia[3].fechaCreacion}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+<div class="row" >
+  <div class="col-sm-12">
+   <h1 align="center">---o---</h1>
+  </div>
+</div>
+<div class="row">
+</div>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6" align="center">
+        <div class="row" align="center">
+          <div class="col-sm-12" align="center">
+          <button type="button" class="btn btn-success alert alert-waning">Aceptar</button>
+        </div>
+        </div>
+        <div class="row"></div>
+        <div class="row"><h1></h1></div>
+        <div class="row"><h1></h1></div>
+        <div class="row"><h1></h1></div>
+        <div class="row"><h1></h1></div>
+        <div class="row"><h1></h1></div>
+        <div class="row"><h1></h1></div>
+        <div class="row" align="center">
+          <div class="col-sm-12" align="center">
+          <button type="button" class="btn btn-danger alert alert-waning" #rechazar="ngModel"  [(ngModel)]="button">Rechazar</button>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert" *ngIf="button.touched">
+              <strong *ngIf="button.click()">Deseas Rechazar el Intercambio!</strong>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <h2 align="center">Estudiante</h2>
+        <div class="card">
+          <div class="card-header">
+            Nombre Estudiante: {{estudiante[8].nombres}}
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-5">
+                <img class="img-fluid" [src]=estudiante[8].urlFotoEstudiante alt="No disponible">
+              </div>
+              <div class="col-sm-7">
+                <h5 class="card-title">Fecha Nacimiento: {{estudiante[8].fechaNacimiento}} </h5>
+                <p class="card-text">Semestre Referencial: {{estudiante[8].semestreActual}}</p>
+                <p class="card-text">Graduado: {{estudiante[8].graduado}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="row">
+        <div class="col-sm-5">
+          <h2 align="center">Materia </h2>
+          <div class="card">
+            <div class="card-header">
+              Materia: {{materia[5].nombre}}
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-5">
+                  <img class="img-fluid" [src]=materia[5].urlFotoMateria alt="No disponible">
+                </div>
+                <div class="col-sm-7">
+                  <h5 class="card-title">Horas a la semana: {{materia[5].numeroHorasSemana}} </h5>
+                  <p class="card-text">Detalle: {{materia[5].descripcion}}</p>
+                  <p class="card-text">Fecha Creacion: {{materia[5].fechaCreacion}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <p align="center"> <img src="https://image.flaticon.com/icons/svg/64/64496.svg"></p>
+        </div>
+        <div class="col-sm-5">
+          <h2 align="center">Materia </h2>
+          <div class="card">
+            <div class="card-header">
+              Materia: {{materia[10].nombre}}
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-5">
+                  <img class="img-fluid" [src]=materia[10].urlFotoMateria alt="No disponible">
+                </div>
+                <div class="col-sm-7">
+                  <h5 class="card-title">Horas a la semana: {{materia[10].numeroHorasSemana}} </h5>
+                  <p class="card-text">Detalle: {{materia[10].descripcion}}</p>
+                  <p class="card-text">Fecha Creacion: {{materia[10].fechaCreacion}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
